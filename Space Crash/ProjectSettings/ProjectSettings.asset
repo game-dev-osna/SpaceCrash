@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: GGJ2020OS
   productName: Space Crash
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -412,7 +412,7 @@ PlayerSettings:
   m_TemplateCustomTags:
     DESCRIPTION: Complete interactive 3D scene demo made in Unity and exported to
       WebVR with the WebVR template of the Unity WebVR assets
-    NAME: Sunny Desert
+    NAME: Space Crash
   mobileMTRendering:
     Android: 1
     iPhone: 1
