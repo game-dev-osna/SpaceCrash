@@ -12,6 +12,8 @@ public class InputListener : MonoBehaviour
 
     [SerializeField]
     private WebVRController leftCtrl;
+    [SerializeField]
+    private WebVRController rightCtrl;
 
     // Start is called before the first frame update
     void Start()
@@ -24,14 +26,11 @@ public class InputListener : MonoBehaviour
     {
         if(asteroidBig.GameOver || questManager.GameWon)
         {
-            Debug.Log("done...");
-            var value1 = Input.GetAxis("TriggerLeft");
-            var value2 = Input.GetAxis("TriggerRight");
-            if (value1 > 0.1f || value2 > 0.1f)
+            if(leftCtrl.GetButtonDown("Trigger") || leftCtrl.GetButtonDown("Grip") || rightCtrl.GetButtonDown("Trigger") || rightCtrl.GetButtonDown("Grip"))
             {
                 Debug.Log("Reload...");
                 UnityEngine.SceneManagement.SceneManager.LoadScene(0);
-            }
+            }            
         }
     }
 }
