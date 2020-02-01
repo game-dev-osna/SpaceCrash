@@ -179,6 +179,12 @@ MonoBehaviour:
   HitByAsteroidTaskIntro: {fileID: 0}
   HitByAsteroidTaskSuccess: {fileID: 0}
   HyperdriveTaskIntro: {fileID: 8300000, guid: bd8744ea0176dd847ba2f82bdaa8ac3a, type: 3}
+  HyperdriveFirstItemDone: {fileID: 8300000, guid: 0934ff64198a6134b922c21557ccdaeb,
+    type: 3}
+  HyperdriveSecondItemDone: {fileID: 8300000, guid: c80c7741b8d548f479ada6ed355d9d39,
+    type: 3}
+  HyperdriveTaskFinished: {fileID: 8300000, guid: a3748505f98821d43a8d056db48a9461,
+    type: 3}
   narrator_01: {fileID: 7119112591316504157}
 --- !u!82 &7119112591316504157
 AudioSource:

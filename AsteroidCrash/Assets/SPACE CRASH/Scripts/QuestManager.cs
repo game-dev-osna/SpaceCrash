@@ -20,8 +20,6 @@ public class QuestManager : MonoBehaviour
     //[SerializeField]
     //private AudioClip SensorikTaskDescription;
 
-
-
     [SerializeField]
     private AudioClip HitByAsteroidTaskSuccess;
 
@@ -29,10 +27,24 @@ public class QuestManager : MonoBehaviour
     private AudioClip HyperdriveTaskIntro;
 
     [SerializeField]
+    private AudioClip HyperdriveFirstItemDone;
+    [SerializeField]
+    private AudioClip HyperdriveSecondItemDone;
+    [SerializeField]
+    private AudioClip HyperdriveTaskFinished;
+
+    [SerializeField]
     private AudioSource narrator_01;
 
+
+    [SerializeField]
+    private GameObject HyperdriveReplacementPartsDoor;
+
+    private int HypderdrivePartsFixed = 0;
+
     private bool SensorikSolvedClipPlayed;
-    private bool HyperdriveTaskIntoPlayed;
+    private bool HyperdriveTaskIntroPlayed;
+    private bool HyperdriveFixed;
 
     // Start is called before the first frame update
     void Start()
@@ -46,11 +58,16 @@ public class QuestManager : MonoBehaviour
     {
         if (!narrator_01.isPlaying)
         {
-            if (SensorikSolvedClipPlayed && !HyperdriveTaskIntoPlayed)
+            if (SensorikSolvedClipPlayed && !HyperdriveTaskIntroPlayed)
             {
                 narrator_01.clip = HyperdriveTaskIntro;
                 narrator_01.PlayDelayed(2);
-                HyperdriveTaskIntoPlayed = true;
+                HyperdriveTaskIntroPlayed = true;
+                HyperdriveReplacementPartsDoor.SetActive(false);
+            }
+            else if(HyperdriveFixed)
+            {
+                //Game won
             }
         }
     }
@@ -59,6 +76,25 @@ public class QuestManager : MonoBehaviour
     {
         StopAndPlay(SensorikTaskSuccess);
         SensorikSolvedClipPlayed = true;
+    }
+
+    public void ProgressHyperdrive()
+    {
+        HypderdrivePartsFixed++;
+
+        if (HypderdrivePartsFixed == 1)
+        {
+            StopAndPlay(HyperdriveFirstItemDone);
+        }
+        else if (HypderdrivePartsFixed == 2)
+        {
+            StopAndPlay(HyperdriveSecondItemDone);
+        }
+        else
+        {
+            StopAndPlay(HyperdriveTaskFinished);
+            HyperdriveFixed = true;
+        }
     }
 
     private void StopAndPlay(AudioClip clip)

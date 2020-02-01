@@ -37,6 +37,18 @@ public class QuestTrigger : MonoBehaviour
             {
                 questManager.SensorikSolved();
             }
+            if(QuestItemToReactTo == "HyperdriveReplacementCylinder")
+            {
+                questManager.ProgressHyperdrive();
+            }
+            if (QuestItemToReactTo == "HyperdriveReplacementBox")
+            {
+                questManager.ProgressHyperdrive();
+            }
+            if (QuestItemToReactTo == "HyperdriveReplacementCapsule")
+            {
+                questManager.ProgressHyperdrive();
+            }
         }
     }
 }
