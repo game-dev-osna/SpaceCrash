@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f44f87c3ce8edc74fb56c8e5973f0efd, type: 2}
+  - {fileID: 2100000, guid: 61beb97ec4756244bb4da5f36b5ccaf3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -186,6 +186,12 @@ MonoBehaviour:
     type: 3}
   narrator_01: {fileID: 7119112591316504157}
   HyperdriveReplacementPartsDoor: {fileID: 0}
+  HyperdriveTrails: {fileID: 0}
+  NormalTrails: {fileID: 0}
+  BigAsteroid: {fileID: 0}
+  AsteroidField: {fileID: 0}
+  GameWonText: {fileID: 0}
+  GameWon: 0
 --- !u!82 &7119112591316504157
 AudioSource:
   m_ObjectHideFlags: 0
@@ -343,7 +349,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f44f87c3ce8edc74fb56c8e5973f0efd, type: 2}
+  - {fileID: 2100000, guid: 5d7283515386b6c4289d3a5d141cedad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

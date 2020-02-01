@@ -53,6 +53,7 @@ public class QuestManager : MonoBehaviour
 
     private int HypderdrivePartsFixed = 0;
 
+    private bool SensorikIntroPlayed;
     private bool SensorikSolvedClipPlayed;
     private bool HyperdriveTaskIntroPlayed;
     private bool HyperdriveFixed;
@@ -71,10 +72,17 @@ public class QuestManager : MonoBehaviour
     {
         if (!narrator_01.isPlaying)
         {
+            if(!SensorikSolvedClipPlayed && !SensorikIntroPlayed)
+            {
+                narrator_01.clip = SensorikTaskIntro;
+                narrator_01.PlayDelayed(1);
+                SensorikIntroPlayed = true;
+            }
+
             if (SensorikSolvedClipPlayed && !HyperdriveTaskIntroPlayed)
             {
                 narrator_01.clip = HyperdriveTaskIntro;
-                narrator_01.PlayDelayed(2);
+                narrator_01.PlayDelayed(1);
                 HyperdriveTaskIntroPlayed = true;
             }
             if(HyperdriveFixed)
