@@ -5,25 +5,31 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour
 {
     [SerializeField]
-    private float travelSpeed;
+    private float maxTravelSpeed;
 
     [SerializeField]
-    private float rotationSpeed;
+    private float maxRotationSpeed;
+
     [SerializeField]
     private Transform rotationTransform;
-
-    private Vector3 initialPosition;
-
+    
     private float rotationSpeedUp;
     private float rotationSpeedForward;
     private float rotationSpeedRight;
+    private float travelSpeed;
+
+    private float lastDistance;
 
     void Start()
     {
-        ReSpawn();
+        rotationSpeedUp = maxRotationSpeed * Random.Range(0.1f, 1f);
+        rotationSpeedForward = maxRotationSpeed * Random.Range(0.1f, 1f);
+        rotationSpeedRight = maxRotationSpeed * Random.Range(0.1f, 1f);
+
+        travelSpeed = maxTravelSpeed * Random.Range(0.1f, 1f);
+        lastDistance = float.MaxValue;
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.forward * (travelSpeed * Time.deltaTime));
@@ -32,19 +38,16 @@ public class Asteroid : MonoBehaviour
         rotationTransform.Rotate(Vector3.forward * (rotationSpeedForward * Time.deltaTime));
         rotationTransform.Rotate(Vector3.right * (rotationSpeedRight * Time.deltaTime));
 
-        if(transform.position.z < -20f)
+        var currentDistance = Vector3.Distance(this.transform.position, Vector3.zero);      
+        if (currentDistance > lastDistance)
         {
-            transform.position = initialPosition;
-            ReSpawn();
+            Destroy(gameObject, 6f);
+        }
+        else
+        {
+            lastDistance = currentDistance;
         }
     }
 
-    void ReSpawn()
-    {
-        rotationSpeedUp = rotationSpeed * Random.Range(0.01f, 1f);
-        rotationSpeedForward = rotationSpeed * Random.Range(0.01f, 1f);
-        rotationSpeedRight = rotationSpeed * Random.Range(0.01f, 1f);
-
-        initialPosition = transform.position;
-    }
+  
 }
