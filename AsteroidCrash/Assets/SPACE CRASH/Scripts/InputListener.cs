@@ -22,7 +22,7 @@ public class InputListener : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(asteroidBig.GameOver || questManager.HyperdriveFixed)
+        if(asteroidBig.GameOver || questManager.GameWon)
         {
             Debug.Log("done...");
             var value1 = Input.GetAxis("TriggerLeft");

@@ -55,7 +55,9 @@ public class QuestManager : MonoBehaviour
 
     private bool SensorikSolvedClipPlayed;
     private bool HyperdriveTaskIntroPlayed;
-    public bool HyperdriveFixed;
+    private bool HyperdriveFixed;
+    public bool GameWon;
+
 
     // Start is called before the first frame update
     void Start()
@@ -74,6 +76,10 @@ public class QuestManager : MonoBehaviour
                 narrator_01.clip = HyperdriveTaskIntro;
                 narrator_01.PlayDelayed(2);
                 HyperdriveTaskIntroPlayed = true;
+            }
+            if(HyperdriveFixed)
+            {
+                GameWon = true;
             }
         }
 

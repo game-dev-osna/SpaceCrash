@@ -124,8 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659fc794686180d4b99f96f9d3b1e951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsFromStartToImpact: 120
-  maxRotationSpeed: 50
+  secondsFromStartToImpact: 90
+  GameOver: 0
+  maxRotationSpeed: 60
   rotationTransform: {fileID: 484981179602677611}
   asteroidParent: {fileID: 0}
   trailsParent: {fileID: 0}
