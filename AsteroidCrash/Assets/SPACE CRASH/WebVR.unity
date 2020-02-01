@@ -2344,6 +2344,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659fc794686180d4b99f96f9d3b1e951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1140127270 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114546255618804366, guid: 54a613ba6e982e84db04156af08d6a89,
+    type: 3}
+  m_PrefabInstance: {fileID: 1302711618}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa198f02a3814330938d23cee1fe833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1199828749
 GameObject:
   m_ObjectHideFlags: 0
@@ -2375,7 +2387,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidBig: {fileID: 1089114060}
   questManager: {fileID: 1376917579}
-  leftCtrl: {fileID: 0}
+  leftCtrl: {fileID: 1432043240}
+  rightCtrl: {fileID: 1140127270}
 --- !u!4 &1199828751
 Transform:
   m_ObjectHideFlags: 0
@@ -2767,6 +2780,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4be77be7543947499c0a53d1ef4ced2, type: 3}
+--- !u!114 &1432043240 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114128207473628304, guid: 54a613ba6e982e84db04156af08d6a89,
+    type: 3}
+  m_PrefabInstance: {fileID: 1302711618}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fa198f02a3814330938d23cee1fe833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1477346859 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4999342641106049816, guid: 08530a6e078803745bbcd0aec534b279,
