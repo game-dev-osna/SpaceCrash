@@ -24,6 +24,7 @@ public class InputListener : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if(asteroidBig.GameOver || questManager.GameWon)
         {
             if(leftCtrl.GetButtonDown("Trigger") || leftCtrl.GetButtonDown("Grip") || rightCtrl.GetButtonDown("Trigger") || rightCtrl.GetButtonDown("Grip"))
@@ -32,5 +33,6 @@ public class InputListener : MonoBehaviour
                 UnityEngine.SceneManagement.SceneManager.LoadScene(0);
             }            
         }
+        */
     }
 }
