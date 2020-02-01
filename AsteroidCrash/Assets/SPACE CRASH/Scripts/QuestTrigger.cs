@@ -33,7 +33,10 @@ public class QuestTrigger : MonoBehaviour
             objectToActivate.SetActive(true);
             objectToDeactivate.SetActive(false);
 
-            questManager.SensorikSolved();
+            if(QuestItemToReactTo == "SensorScreen")
+            {
+                questManager.SensorikSolved();
+            }
         }
     }
 }

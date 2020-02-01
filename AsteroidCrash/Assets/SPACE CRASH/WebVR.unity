@@ -1224,6 +1224,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 547383436, guid: 3d8467e4c96bfbc4fb0a2bf2594ad076, type: 3}
+      propertyPath: objectToDeactivate
+      value: 
+      objectReference: {fileID: 2061711376}
+    - target: {fileID: 547383436, guid: 3d8467e4c96bfbc4fb0a2bf2594ad076, type: 3}
+      propertyPath: questManager
+      value: 
+      objectReference: {fileID: 1376917579}
+    - target: {fileID: 1393497786, guid: 3d8467e4c96bfbc4fb0a2bf2594ad076, type: 3}
+      propertyPath: objectToDeactivate
+      value: 
+      objectReference: {fileID: 2061711376}
+    - target: {fileID: 1393497786, guid: 3d8467e4c96bfbc4fb0a2bf2594ad076, type: 3}
+      propertyPath: questManager
+      value: 
+      objectReference: {fileID: 1376917579}
+    - target: {fileID: 1682710241, guid: 3d8467e4c96bfbc4fb0a2bf2594ad076, type: 3}
+      propertyPath: objectToDeactivate
+      value: 
+      objectReference: {fileID: 2057566635}
+    - target: {fileID: 1682710241, guid: 3d8467e4c96bfbc4fb0a2bf2594ad076, type: 3}
+      propertyPath: questManager
+      value: 
+      objectReference: {fileID: 1376917579}
     - target: {fileID: 2110307894, guid: 3d8467e4c96bfbc4fb0a2bf2594ad076, type: 3}
       propertyPath: objectToDeactivate
       value: 
@@ -2818,6 +2842,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &2057566635 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 767425369880856674, guid: 920c781ceed672a4e97c9b80fc2a75ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 3199368089845580542}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2061711376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6383606594394677018, guid: 920c781ceed672a4e97c9b80fc2a75ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 3199368089845580542}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2138631032 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1358284574342529745, guid: 08530a6e078803745bbcd0aec534b279,
@@ -2931,26 +2967,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: QuestItems
-      objectReference: {fileID: 0}
-    - target: {fileID: 3194869449601297101, guid: 920c781ceed672a4e97c9b80fc2a75ea,
-        type: 3}
-      propertyPath: SensorikTaskSuccess
-      value: 
-      objectReference: {fileID: 8300000, guid: f405cfddff5edd847b200472eb4e03c6, type: 3}
-    - target: {fileID: 7119112591316504157, guid: 920c781ceed672a4e97c9b80fc2a75ea,
-        type: 3}
-      propertyPath: Priority
-      value: 31
-      objectReference: {fileID: 0}
-    - target: {fileID: 7119112591316504157, guid: 920c781ceed672a4e97c9b80fc2a75ea,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7119112591316504157, guid: 920c781ceed672a4e97c9b80fc2a75ea,
-        type: 3}
-      propertyPath: MinDistance
-      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7987851817258915047, guid: 920c781ceed672a4e97c9b80fc2a75ea,
         type: 3}
