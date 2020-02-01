@@ -16,6 +16,11 @@ public class QuestTrigger : MonoBehaviour
     [SerializeField]
     private string QuestItemToReactTo;
 
+    //public bool HasBeenSolved;
+
+        [SerializeField]
+    private QuestManager questManager;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.GetComponent<QuestItem>() != null
@@ -27,6 +32,8 @@ public class QuestTrigger : MonoBehaviour
             }
             objectToActivate.SetActive(true);
             objectToDeactivate.SetActive(false);
+
+            questManager.SensorikSolved();
         }
     }
 }

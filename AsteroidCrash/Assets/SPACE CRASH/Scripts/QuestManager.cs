@@ -8,10 +8,8 @@ public class QuestManager : MonoBehaviour
     private AudioClip Prologue;
 
     [SerializeField]
-    private AudioClip SensorikTaskSuccessAI;
+    private AudioClip SensorikTaskSuccess;
 
-    [SerializeField]
-    private AudioClip SensorikTaskSuccessBoot;
 
     [SerializeField]
     private AudioClip HitByAsteroidTaskIntro;
@@ -39,5 +37,12 @@ public class QuestManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SensorikSolved()
+    {
+        narrator_01.Stop();
+        narrator_01.clip = SensorikTaskSuccess;
+        narrator_01.Play();
     }
 }

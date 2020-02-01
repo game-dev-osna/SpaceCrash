@@ -1785,6 +1785,7 @@ MonoBehaviour:
   objectToDeactivate: {fileID: 0}
   effect: {fileID: 2110307898}
   QuestItemToReactTo: SensorScreen
+  questManager: {fileID: 0}
 --- !u!82 &2110307898
 AudioSource:
   m_ObjectHideFlags: 0
