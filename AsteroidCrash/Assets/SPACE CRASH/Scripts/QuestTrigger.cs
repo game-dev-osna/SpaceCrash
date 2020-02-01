@@ -18,9 +18,7 @@ public class QuestTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-        if(other.tag == "Interactable" 
-            && other.GetComponent<QuestItem>() != null
+        if(other.GetComponent<QuestItem>() != null
             && QuestItemToReactTo == other.GetComponent<QuestItem>().QuestItemName)
         {
             if(effect != null)
@@ -30,18 +28,5 @@ public class QuestTrigger : MonoBehaviour
             objectToActivate.SetActive(true);
             objectToDeactivate.SetActive(false);
         }
-
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
