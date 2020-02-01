@@ -105,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 3935518326529930984}
   m_LocalRotation: {x: 0, y: -0.9970568, z: 0, w: 0.0766668}
   m_LocalPosition: {x: 16.55, y: 2.3885343, z: 43.77}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_Children:
   - {fileID: 484981179602677611}
   - {fileID: 5024935296202313734}
@@ -127,6 +127,10 @@ MonoBehaviour:
   secondsFromStartToImpact: 30
   maxRotationSpeed: 50
   rotationTransform: {fileID: 484981179602677611}
+  asteroidParent: {fileID: 0}
+  trailsParent: {fileID: 0}
+  endText: {fileID: 0}
+  ownSphere: {fileID: 263250550112752562}
 --- !u!1 &5024935296202313735
 GameObject:
   m_ObjectHideFlags: 0

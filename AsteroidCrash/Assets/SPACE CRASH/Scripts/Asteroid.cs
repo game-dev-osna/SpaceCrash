@@ -20,9 +20,11 @@ public class Asteroid : MonoBehaviour
     private AudioSource audioSource;
     private float speed;
     private bool played;
+    private bool paused;
 
     void Start()
     {
+        paused = false;
         audioSource = GetComponent<AudioSource>();       
         initialPosition = transform.position;       
         Setup();
@@ -44,6 +46,9 @@ public class Asteroid : MonoBehaviour
 
     void Update()
     {
+        if (paused)
+            return;
+
         transform.Translate(Vector3.forward * (travelSpeed * Time.deltaTime));
 
         rotationTransform.Rotate(Vector3.up * (rotationSpeedUp * Time.deltaTime));
@@ -62,5 +67,10 @@ public class Asteroid : MonoBehaviour
             audioSource.Play();           
         }
     }
-      
+
+    public void Pause(bool toggle)
+    {
+        paused = toggle;
+    }
+
 }

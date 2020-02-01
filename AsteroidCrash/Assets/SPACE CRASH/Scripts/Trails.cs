@@ -17,7 +17,9 @@ public class Trails : MonoBehaviour
 
     private Vector3 startPosition;
 
- 
+    private bool paused;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,9 @@ public class Trails : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (paused)
+            return;
+
         //because we only travel forward
         float distanceTravelled = startPosition.z - transform.position.z;
         if(distanceTravelled > maxDistance)
@@ -39,4 +44,11 @@ public class Trails : MonoBehaviour
 
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
+
+    public void Pause(bool toggle)
+    {
+        paused = toggle;
+    }
+
+
 }

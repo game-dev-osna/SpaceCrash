@@ -13,6 +13,15 @@ public class AsteroidBig : MonoBehaviour
     private float maxRotationSpeed;
     [SerializeField]
     private Transform rotationTransform;
+    [SerializeField]
+    private GameObject asteroidParent;
+    [SerializeField]
+    private GameObject trailsParent;
+    [SerializeField]
+    private GameObject endText;
+    [SerializeField]
+    private GameObject ownSphere;
+
     private Vector3 initialPosition;
 
     private float rotationSpeedUp;
@@ -23,6 +32,7 @@ public class AsteroidBig : MonoBehaviour
 
     void Start()
     {
+        endText.SetActive(false);
         audioSource = GetComponent<AudioSource>();
 
         initialPosition = transform.position;
@@ -46,6 +56,18 @@ public class AsteroidBig : MonoBehaviour
         if(Vector3.Distance(transform.position, Vector3.zero) <= 5f)
         {
             Debug.Log("End.");
+            foreach (var child in asteroidParent.transform.GetComponentsInChildren<Asteroid>())
+            {
+                child.Pause(true);
+            }
+            foreach (var child in trailsParent.transform.GetComponentsInChildren<Trails>())
+            {
+                child.Pause(true);
+            }
+
+            ownSphere.SetActive(false);
+            endText.SetActive(true);
+
         }
     }
    
