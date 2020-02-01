@@ -12,20 +12,15 @@ public class Asteroid : MonoBehaviour
     [SerializeField]
     private Transform rotationTransform;
 
+    private Vector3 initialPosition;
 
     private float rotationSpeedUp;
     private float rotationSpeedForward;
     private float rotationSpeedRight;
 
     void Start()
-    {       
-        rotationSpeedUp = rotationSpeed * Random.Range(0.01f, 1f);
-        rotationSpeedForward = rotationSpeed * Random.Range(0.01f, 1f);
-        rotationSpeedRight = rotationSpeed * Random.Range(0.01f, 1f);
-
-        Debug.Log(rotationSpeedUp);
-        Debug.Log(rotationSpeedForward);
-        Debug.Log(rotationSpeedRight);
+    {
+        ReSpawn();
     }
 
     // Update is called once per frame
@@ -36,5 +31,20 @@ public class Asteroid : MonoBehaviour
         rotationTransform.Rotate(Vector3.up * (rotationSpeedUp * Time.deltaTime));
         rotationTransform.Rotate(Vector3.forward * (rotationSpeedForward * Time.deltaTime));
         rotationTransform.Rotate(Vector3.right * (rotationSpeedRight * Time.deltaTime));
+
+        if(transform.position.z < -20f)
+        {
+            transform.position = initialPosition;
+            ReSpawn();
+        }
+    }
+
+    void ReSpawn()
+    {
+        rotationSpeedUp = rotationSpeed * Random.Range(0.01f, 1f);
+        rotationSpeedForward = rotationSpeed * Random.Range(0.01f, 1f);
+        rotationSpeedRight = rotationSpeed * Random.Range(0.01f, 1f);
+
+        initialPosition = transform.position;
     }
 }
