@@ -40,11 +40,25 @@ public class QuestManager : MonoBehaviour
     [SerializeField]
     private GameObject HyperdriveReplacementPartsDoor;
 
+    [SerializeField]
+    private GameObject HyperdriveTrails;
+    [SerializeField]
+    private GameObject NormalTrails;
+
+    [SerializeField]
+    private GameObject BigAsteroid;
+    [SerializeField]
+    private GameObject AsteroidField;
+    [SerializeField]
+    private GameObject GameWonText;
+
     private int HypderdrivePartsFixed = 0;
 
     private bool SensorikSolvedClipPlayed;
     private bool HyperdriveTaskIntroPlayed;
-    private bool HyperdriveFixed;
+    public bool HyperdriveFixed;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -63,18 +77,24 @@ public class QuestManager : MonoBehaviour
                 narrator_01.clip = HyperdriveTaskIntro;
                 narrator_01.PlayDelayed(2);
                 HyperdriveTaskIntroPlayed = true;
-                HyperdriveReplacementPartsDoor.SetActive(false);
             }
-            else if(HyperdriveFixed)
-            {
-                //Game won
-            }
+        }
+
+        if (HyperdriveFixed && !BigAsteroid.GetComponent<AsteroidBig>().GameOver)
+        {
+            //Game won
+            HyperdriveTrails.SetActive(true);
+            GameWonText.SetActive(true);
+            NormalTrails.SetActive(false);
+            BigAsteroid.SetActive(false);
+            AsteroidField.SetActive(false);
         }
     }
 
     public void SensorikSolved()
     {
         StopAndPlay(SensorikTaskSuccess);
+        HyperdriveReplacementPartsDoor.SetActive(false);
         SensorikSolvedClipPlayed = true;
     }
 

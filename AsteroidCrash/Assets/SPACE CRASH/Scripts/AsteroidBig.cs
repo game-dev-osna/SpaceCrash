@@ -7,6 +7,7 @@ public class AsteroidBig : MonoBehaviour
     [SerializeField]
     private float secondsFromStartToImpact;
 
+    public bool GameOver;
     private float timer;
     
     [SerializeField]
@@ -42,11 +43,9 @@ public class AsteroidBig : MonoBehaviour
         rotationSpeedRight = maxRotationSpeed * Random.Range(0.1f, 1f);
     }
 
-    private bool gameOver;
-
     void Update()
     {
-        if (gameOver)
+        if (GameOver)
             return;
 
         rotationTransform.Rotate(Vector3.up * (rotationSpeedUp * Time.deltaTime));
@@ -70,7 +69,7 @@ public class AsteroidBig : MonoBehaviour
 
             //ownSphere.SetActive(false);
             endText.SetActive(true);
-            gameOver = true;
+            GameOver = true;
         }
     }
    
