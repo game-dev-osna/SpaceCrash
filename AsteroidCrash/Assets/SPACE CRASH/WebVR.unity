@@ -916,7 +916,7 @@ PrefabInstance:
     - target: {fileID: 2275991674987594899, guid: b9a2014f4968784448f2473d910b43f1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2848633389871670690, guid: b9a2014f4968784448f2473d910b43f1,
         type: 3}
@@ -3218,6 +3218,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Trails for speed HYPER
+      objectReference: {fileID: 0}
+    - target: {fileID: 7920889169264625451, guid: 0b57a85c4732a3c47842e419871ae234,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b57a85c4732a3c47842e419871ae234, type: 3}
