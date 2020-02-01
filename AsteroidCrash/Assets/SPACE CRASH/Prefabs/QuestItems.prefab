@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 9038903692356903176}
   - component: {fileID: 2626548539584700175}
   - component: {fileID: 8598697016120603811}
-  - component: {fileID: 7432739274064655153}
   - component: {fileID: 2057566641}
   - component: {fileID: 2057566637}
+  - component: {fileID: 2057566636}
   m_Layer: 0
   m_Name: HyperdriveBox
   m_TagString: Interactable
@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767425369880856674}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.63708156, y: 0.39899993, z: -0.10599995}
-  m_LocalScale: {x: 0.07, y: 0.2, z: 0.07}
+  m_LocalPosition: {x: 0.63708156, y: 0.386, z: -0.10599995}
+  m_LocalScale: {x: 0.07, y: 0.18, z: 0.07}
   m_Children: []
   m_Father: {fileID: 7987851817258915047}
   m_RootOrder: 2
@@ -82,20 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &7432739274064655153
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767425369880856674}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!54 &2057566641
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -125,6 +111,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestItemName: HyperdriveReplacementBox
+--- !u!65 &2057566636
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767425369880856674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1372752006669196078
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +185,7 @@ MonoBehaviour:
   HyperdriveTaskFinished: {fileID: 8300000, guid: a3748505f98821d43a8d056db48a9461,
     type: 3}
   narrator_01: {fileID: 7119112591316504157}
+  HyperdriveReplacementPartsDoor: {fileID: 0}
 --- !u!82 &7119112591316504157
 AudioSource:
   m_ObjectHideFlags: 0
@@ -311,7 +311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772923685671370350}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.63708156, y: 0.39899993, z: -0.22700024}
+  m_LocalPosition: {x: 0.63708156, y: 0.382, z: -0.22700024}
   m_LocalScale: {x: 0.07, y: 0.09, z: 0.07}
   m_Children: []
   m_Father: {fileID: 7987851817258915047}
@@ -542,9 +542,9 @@ GameObject:
   - component: {fileID: 5875163040867577980}
   - component: {fileID: 81003432563774343}
   - component: {fileID: 4629482006909372592}
-  - component: {fileID: 919957793533485961}
   - component: {fileID: 2061711382}
   - component: {fileID: 2061711378}
+  - component: {fileID: 2061711377}
   m_Layer: 0
   m_Name: HyperdriveCylinder
   m_TagString: Interactable
@@ -560,7 +560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6383606594394677018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.63708156, y: 0.39899993, z: 0.038000107}
+  m_LocalPosition: {x: 0.63708156, y: 0.3826, z: 0.038000107}
   m_LocalScale: {x: 0.07, y: 0.09, z: 0.07}
   m_Children: []
   m_Father: {fileID: 7987851817258915047}
@@ -613,20 +613,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &919957793533485961
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6383606594394677018}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!54 &2061711382
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -656,3 +642,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestItemName: HyperdriveReplacementCylinder
+--- !u!136 &2061711377
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6383606594394677018}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000002
+  m_Height: 1.9999999
+  m_Direction: 1
+  m_Center: {x: 0.00000005960465, y: 0, z: -0.00000008940698}

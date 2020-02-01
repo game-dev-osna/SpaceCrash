@@ -1362,7 +1362,7 @@ PrefabInstance:
     - target: {fileID: 547383436, guid: 3d8467e4c96bfbc4fb0a2bf2594ad076, type: 3}
       propertyPath: objectToDeactivate
       value: 
-      objectReference: {fileID: 2061711376}
+      objectReference: {fileID: 1590117666}
     - target: {fileID: 547383436, guid: 3d8467e4c96bfbc4fb0a2bf2594ad076, type: 3}
       propertyPath: questManager
       value: 
@@ -1391,11 +1391,6 @@ PrefabInstance:
       propertyPath: questManager
       value: 
       objectReference: {fileID: 1376917579}
-    - target: {fileID: 3307393618318928693, guid: 3d8467e4c96bfbc4fb0a2bf2594ad076,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7074353342233699980, guid: 3d8467e4c96bfbc4fb0a2bf2594ad076,
         type: 3}
       propertyPath: m_Name
@@ -2579,6 +2574,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1590117666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1772923685671370350, guid: 920c781ceed672a4e97c9b80fc2a75ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 3199368089845580542}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1621532487
 PrefabInstance:
   m_ObjectHideFlags: 0
