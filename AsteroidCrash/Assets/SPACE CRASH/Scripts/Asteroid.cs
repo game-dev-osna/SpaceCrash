@@ -17,10 +17,14 @@ public class Asteroid : MonoBehaviour
     private float rotationSpeedRight;
     private float travelSpeed;
 
+    private AudioSource audioSource;
+    private float speed;
+    private bool played;
 
     void Start()
     {
-        initialPosition = transform.position;
+        audioSource = GetComponent<AudioSource>();       
+        initialPosition = transform.position;       
         Setup();
     }
 
@@ -31,6 +35,11 @@ public class Asteroid : MonoBehaviour
         rotationSpeedRight = maxRotationSpeed * Random.Range(0.1f, 1f);
 
         travelSpeed = maxTravelSpeed * Random.Range(0.1f, 1f);
+
+        // audio
+        audioSource.Stop();
+        audioSource.pitch = travelSpeed / maxTravelSpeed;
+        played = false;
     }
 
     void Update()
@@ -45,7 +54,13 @@ public class Asteroid : MonoBehaviour
         {
             this.transform.position = initialPosition;
             Setup();
-        }       
+        }
+        
+        if(played == false && Vector3.Distance(transform.position, Vector3.zero) <= 16f)
+        {
+            played = true;
+            audioSource.Play();           
+        }
     }
       
 }
