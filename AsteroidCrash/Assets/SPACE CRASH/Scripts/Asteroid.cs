@@ -6,28 +6,31 @@ public class Asteroid : MonoBehaviour
 {
     [SerializeField]
     private float maxTravelSpeed;
-
     [SerializeField]
     private float maxRotationSpeed;
-
     [SerializeField]
-    private Transform rotationTransform;
-    
+    private Transform rotationTransform;    
+    private Vector3 initialPosition;
+
     private float rotationSpeedUp;
     private float rotationSpeedForward;
     private float rotationSpeedRight;
     private float travelSpeed;
 
-    private float lastDistance;
 
     void Start()
     {
+        initialPosition = transform.position;
+        Setup();
+    }
+
+    void Setup()
+    {        
         rotationSpeedUp = maxRotationSpeed * Random.Range(0.1f, 1f);
         rotationSpeedForward = maxRotationSpeed * Random.Range(0.1f, 1f);
         rotationSpeedRight = maxRotationSpeed * Random.Range(0.1f, 1f);
 
         travelSpeed = maxTravelSpeed * Random.Range(0.1f, 1f);
-        lastDistance = float.MaxValue;
     }
 
     void Update()
@@ -38,16 +41,11 @@ public class Asteroid : MonoBehaviour
         rotationTransform.Rotate(Vector3.forward * (rotationSpeedForward * Time.deltaTime));
         rotationTransform.Rotate(Vector3.right * (rotationSpeedRight * Time.deltaTime));
 
-        var currentDistance = Vector3.Distance(this.transform.position, Vector3.zero);      
-        if (currentDistance > lastDistance)
+        if(transform.position.z <= -40)
         {
-            Destroy(gameObject, 6f);
-        }
-        else
-        {
-            lastDistance = currentDistance;
-        }
+            this.transform.position = initialPosition;
+            Setup();
+        }       
     }
-
-  
+      
 }
