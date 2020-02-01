@@ -36,7 +36,6 @@ public class QuestManager : MonoBehaviour
     [SerializeField]
     private AudioSource narrator_01;
 
-
     [SerializeField]
     private GameObject HyperdriveReplacementPartsDoor;
 
@@ -57,8 +56,6 @@ public class QuestManager : MonoBehaviour
     private bool SensorikSolvedClipPlayed;
     private bool HyperdriveTaskIntroPlayed;
     public bool HyperdriveFixed;
-
-
 
     // Start is called before the first frame update
     void Start()
