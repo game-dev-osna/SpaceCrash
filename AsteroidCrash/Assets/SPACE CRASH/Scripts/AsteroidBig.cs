@@ -23,6 +23,12 @@ public class AsteroidBig : MonoBehaviour
     [SerializeField]
     private GameObject ownSphere;
 
+    public GameObject HyperdriveItem_01;
+    public GameObject HyperdriveItem_02;
+    public GameObject HyperdriveItem_03;
+    public GameObject SensorScreen;
+    public GameObject pointlight;
+
     private Vector3 initialPosition;
 
     private float rotationSpeedUp;
@@ -46,7 +52,15 @@ public class AsteroidBig : MonoBehaviour
     void Update()
     {
         if (GameOver)
+        {
+            SensorScreen.SetActive(false);
+            HyperdriveItem_01.SetActive(false);
+            HyperdriveItem_02.SetActive(false);
+            HyperdriveItem_03.SetActive(false);
+            pointlight.SetActive(false);
             return;
+        }
+           
 
         rotationTransform.Rotate(Vector3.up * (rotationSpeedUp * Time.deltaTime));
         rotationTransform.Rotate(Vector3.forward * (rotationSpeedForward * Time.deltaTime));

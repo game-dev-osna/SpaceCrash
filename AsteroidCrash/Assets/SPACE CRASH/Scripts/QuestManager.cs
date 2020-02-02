@@ -12,7 +12,7 @@ public class QuestManager : MonoBehaviour
 
     [SerializeField]
     private AudioClip SensorikTaskSuccess;
-    
+
     [SerializeField]
     private AudioClip HitByAsteroidTaskIntro;
 
@@ -75,7 +75,7 @@ public class QuestManager : MonoBehaviour
     {
         if (!narrator_01.isPlaying)
         {
-            if(!SensorikSolvedClipPlayed && !SensorikIntroPlayed)
+            if (!SensorikSolvedClipPlayed && !SensorikIntroPlayed)
             {
                 narrator_01.clip = SensorikTaskIntro;
                 narrator_01.PlayDelayed(1);
@@ -88,7 +88,7 @@ public class QuestManager : MonoBehaviour
                 narrator_01.PlayDelayed(1);
                 HyperdriveTaskIntroPlayed = true;
             }
-            if(HyperdriveFixed)
+            if (HyperdriveFixed)
             {
                 GameWon = true;
             }
@@ -138,7 +138,7 @@ public class QuestManager : MonoBehaviour
     }
 
     public void DontTouchHyperdriveFrame()
-    {        
+    {
         StopAndPlay(HyperdriveDontTouch);
     }
 
