@@ -2500,6 +2500,11 @@ PrefabInstance:
       propertyPath: endText
       value: 
       objectReference: {fileID: 1309002355}
+    - target: {fileID: 605378302407376871, guid: e02825ff81bc75f4b8ead2a534100795,
+        type: 3}
+      propertyPath: secondsFromStartToImpact
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 3935518326529930984, guid: e02825ff81bc75f4b8ead2a534100795,
         type: 3}
       propertyPath: m_Name
