@@ -104,6 +104,9 @@ public class QuestManager : MonoBehaviour
 
     public void SensorikSolved()
     {
+        if (BigAsteroid.GetComponent<AsteroidBig>().GameOver)
+            return;
+
         StopAndPlay(SensorikTaskSuccess);
         HyperdriveReplacementPartsDoor.SetActive(false);
         SensorikSolvedClipPlayed = true;
@@ -111,6 +114,9 @@ public class QuestManager : MonoBehaviour
 
     public void ProgressHyperdrive()
     {
+        if (BigAsteroid.GetComponent<AsteroidBig>().GameOver)
+            return;
+
         HypderdrivePartsFixed++;
 
         if (HypderdrivePartsFixed == 1)
