@@ -28,13 +28,14 @@ public class AsteroidBig : MonoBehaviour
     public GameObject HyperdriveItem_03;
     public GameObject SensorScreen;
     public GameObject pointlight;
-
+ 
     private Vector3 initialPosition;
 
     private float rotationSpeedUp;
     private float rotationSpeedForward;
     private float rotationSpeedRight;
 
+    [SerializeField]
     private AudioSource audioSource; 
 
     void Start()
@@ -57,7 +58,7 @@ public class AsteroidBig : MonoBehaviour
             HyperdriveItem_01.SetActive(false);
             HyperdriveItem_02.SetActive(false);
             HyperdriveItem_03.SetActive(false);
-            pointlight.SetActive(false);
+            pointlight.SetActive(false);           
             return;
         }
            
@@ -84,6 +85,7 @@ public class AsteroidBig : MonoBehaviour
             //ownSphere.SetActive(false);
             endText.SetActive(true);
             GameOver = true;
+            audioSource.Play();
         }
     }
    
