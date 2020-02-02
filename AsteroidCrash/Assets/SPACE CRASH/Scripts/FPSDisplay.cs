@@ -11,11 +11,6 @@ public class FPSDisplay : MonoBehaviour
 
 	// see: http://wiki.unity3d.com/index.php/FramesPerSecond
 	
-	void Start()
-	{
-		toggle = true; // debug
-	}
-
 	void Update()
 	{
 		if(Input.GetKeyDown(KeyCode.F))
