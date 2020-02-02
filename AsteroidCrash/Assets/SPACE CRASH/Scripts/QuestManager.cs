@@ -12,8 +12,7 @@ public class QuestManager : MonoBehaviour
 
     [SerializeField]
     private AudioClip SensorikTaskSuccess;
-
-
+    
     [SerializeField]
     private AudioClip HitByAsteroidTaskIntro;
 
@@ -32,6 +31,10 @@ public class QuestManager : MonoBehaviour
     private AudioClip HyperdriveSecondItemDone;
     [SerializeField]
     private AudioClip HyperdriveTaskFinished;
+
+
+    [SerializeField]
+    private AudioClip HyperdriveDontTouch;
 
     [SerializeField]
     private AudioSource narrator_01;
@@ -132,6 +135,11 @@ public class QuestManager : MonoBehaviour
             StopAndPlay(HyperdriveTaskFinished);
             HyperdriveFixed = true;
         }
+    }
+
+    public void DontTouchHyperdriveFrame()
+    {        
+        StopAndPlay(HyperdriveDontTouch);
     }
 
     private void StopAndPlay(AudioClip clip)

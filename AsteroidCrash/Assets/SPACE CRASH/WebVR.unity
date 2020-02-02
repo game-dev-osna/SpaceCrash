@@ -1758,6 +1758,10 @@ PrefabInstance:
       propertyPath: questManager
       value: 
       objectReference: {fileID: 1376917579}
+    - target: {fileID: 1825778762, guid: 3d8467e4c96bfbc4fb0a2bf2594ad076, type: 3}
+      propertyPath: questManager
+      value: 
+      objectReference: {fileID: 1376917579}
     - target: {fileID: 2110307894, guid: 3d8467e4c96bfbc4fb0a2bf2594ad076, type: 3}
       propertyPath: objectToDeactivate
       value: 
@@ -3949,6 +3953,11 @@ PrefabInstance:
       propertyPath: GameWonText
       value: 
       objectReference: {fileID: 1784350596}
+    - target: {fileID: 3194869449601297101, guid: 920c781ceed672a4e97c9b80fc2a75ea,
+        type: 3}
+      propertyPath: HyperdriveDontTouch
+      value: 
+      objectReference: {fileID: 8300000, guid: f5ad809c900259a48b262397f18f7529, type: 3}
     - target: {fileID: 7987851817258915047, guid: 920c781ceed672a4e97c9b80fc2a75ea,
         type: 3}
       propertyPath: m_LocalPosition.x

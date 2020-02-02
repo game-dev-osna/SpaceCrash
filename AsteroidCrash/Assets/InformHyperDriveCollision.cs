@@ -43,14 +43,17 @@ public class InformHyperDriveCollision : MonoBehaviour
         {
             if (other.gameObject.GetComponent<QuestItem>().QuestItemName == "HyperdriveReplacementCapsule")
             {
+                manager.questManager.DontTouchHyperdriveFrame();
                 resetToPosition(manager.PosCapsule, other);
             }
             else if (other.gameObject.GetComponent<QuestItem>().QuestItemName == "HyperdriveReplacementBox")
             {
+                manager.questManager.DontTouchHyperdriveFrame();
                 resetToPosition(manager.PosBox, other);
             }
             else if (other.gameObject.GetComponent<QuestItem>().QuestItemName == "HyperdriveReplacementCylinder")
             {
+                manager.questManager.DontTouchHyperdriveFrame();
                 resetToPosition(manager.PosCylinder, other);
             }
         }

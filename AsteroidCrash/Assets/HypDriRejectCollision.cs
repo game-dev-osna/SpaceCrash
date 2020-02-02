@@ -7,5 +7,7 @@ public class HypDriRejectCollision : MonoBehaviour
     public GameObject PosCapsule;
     public GameObject PosBox;
     public GameObject PosCylinder;
-
+    
+    [SerializeField]
+    public QuestManager questManager;
 }
